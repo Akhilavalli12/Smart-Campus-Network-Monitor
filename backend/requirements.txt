@@ -1,0 +1,13 @@
+# Runtime
+fastapi==0.142.2
+uvicorn[standard]==0.54.0
+pydantic==2.13.5
+pydantic-settings==2.15.0
+pymongo==4.18.2
+psutil==7.2.2
+icmplib==3.0.4  # real ICMP echo (Stage 2)
+
+# Testing
+pytest==9.1.1
+pytest-asyncio==1.4.0
+httpx2==2.13.1  # TestClient transport (Starlette now prefers httpx2)

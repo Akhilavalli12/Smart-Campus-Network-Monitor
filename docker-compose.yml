@@ -1,0 +1,15 @@
+# MongoDB for the Smart Campus Network Monitor.
+#   docker compose up -d mongo
+# The app creates its collections and indexes by itself; the seed script loads the demo campus.
+services:
+  mongo:
+    image: mongo:7
+    container_name: campus-noc-mongo
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:27017:27017"   # reachable from this computer only
+    volumes:
+      - campus-noc-data:/data/db
+
+volumes:
+  campus-noc-data:
